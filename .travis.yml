@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.6'
+script:
+- python website.py freeze
+deploy:
+  provider: script
+  script: python website.py deploy --push
+  on:
+    branch: master
+    repo: hroncok/elsapyvo
+env:
+  global:
+    secure: SLrVf14CHu5SNvPzO0oWgvamatX7ujLqxbQoKoT5rRfFprXzrDSUK6R71fCxdAqth14ogQQCmzzDj0TwWDDU2qfrve69qCrS5CSaxlo2s6PBI35sfXppUtxsH7P0HIlvXtnqWI+F9zLYx5eNNGn9KYjmo/c3yfAhX4k4YeXguu5XUta9ml03sEClH7VfsNpW+DCS3Ogu79RgdI3VCz0AKMrrwBLZVTBnUIQnfNHEjQxnCLxk7Dph7Klavt5QjelhcX5T0ftaGWjwXDLcqe2caG5NsTZEHhyZajHrkRGlHCkqy1Svi0EkO25zj6WMdyuD39b+9pjhXNb6l5tRrr0yuBN2GGeGQGRc6J8LkoEjtY67rIFA5howL+w71cgz7o80CZtfepVCnJQZExF7YET0xr/8L7byulXMlNtnDe8a2dMtuQWGHgBov9y4Rk67s1IvqY9Wn0D/LiYk2Ia5g3v6hEhmXjsSY+XeOQLAn4aq1LbZvyvx4pMGCfMCYUGnoZip0TqDMLZc3YZn0p4ifr0PtaZb71Aem1tKayjDDQC13eOCvYWcihZ3b1d6YJwRqHdPFrt8GezO6Ca4WkDkgFiQ5tDGOgW4TEOh0BdrXHZ1GSQciSlj4uvQ7hQ+DkCxWI08ixuwUqfhCTzBa0XVijpsgc91NGh5tizmRYtDTCWj94w=
